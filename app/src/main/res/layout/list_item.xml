@@ -25,6 +25,7 @@
             android:layout_marginTop="10dp"
             android:fontFamily="sans-serif"
             android:text="22/20/22"
+            android:textColor="@color/white"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
