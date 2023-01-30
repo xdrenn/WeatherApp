@@ -273,7 +273,7 @@ public class MainFragment extends Fragment {
             JSONArray forecastDays = responseObject.getJSONObject("forecast").getJSONArray("forecastday");
 
             textCity.setText(location.getString("name"));
-            textTemperature.setText(current.getString("temp_c") + "°C");
+            textTemperature.setText(current.getString("temp_c") + "°");
             textDate.setText(current.getString("last_updated"));
 
             condition = current.getJSONObject("condition");
@@ -291,7 +291,7 @@ public class MainFragment extends Fragment {
                 JSONObject hour = hours.getJSONObject(i);
                 JSONObject condition = hour.getJSONObject("condition");
                 String time = hour.getString("time");
-                String temp = hour.getString("temp_c");
+                String temp = hour.getString("temp_c")  + "°";
                 String conditionText = condition.getString("text");
                 String img = condition.getString("icon");
 
@@ -308,7 +308,7 @@ public class MainFragment extends Fragment {
                 JSONObject conditionObject = dayObject.getJSONObject("condition");
 
                 String time = object.getString("date");
-                String temp = dayObject.getString("mintemp_c");
+                String temp = dayObject.getString("mintemp_c")  + "°";
                 String condition = conditionObject.getString("text");
                 String img = conditionObject.getString("icon");
 
